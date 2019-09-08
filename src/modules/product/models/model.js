@@ -9,6 +9,24 @@ var ProductSchema = new Schema({
         type: String,
         required: 'Please fill a Product name',
     },
+    status: {
+        type: String,
+        enum: ['waitapprove', 'approve', 'retire'],
+        default: ['waitapprove']
+    },
+    images: {
+        type: [{
+            url: {
+                type: String,
+            }
+        }]
+    },
+    description: {
+        type: String,
+    },
+    qty: {
+        type: String,
+    },
     created: {
         type: Date,
         default: Date.now
