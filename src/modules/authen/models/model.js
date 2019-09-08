@@ -21,30 +21,9 @@ var ModelSchema = new Schema({
     enum: ['waitapprove', 'approve', 'retire'],
     default: ['waitapprove']
   },
-  remarkrejectteam: {
-    type: [{
-      datereject: {
-        type: Date,
-        default: Date.now
-      },
-      remark: {
-        type: String
-      }
-    }]
-  },
-  historyaboutteam: {
-    type: [{
-      teamname: {
-        type: String
-      },
-      teamid: {
-        type: String
-      },
-      datereject: {
-        type: Date,
-        default: Date.now
-      },
-    }]
+  employeeID:{
+    type: String,
+    required: "Please fill in your employeeID"
   },
   firstname: {
     type: String,
@@ -80,36 +59,6 @@ var ModelSchema = new Schema({
   password: {
     type: String,
     default: ""
-  },
-  ref1: {
-    type: String
-  },
-  ref2: {
-    type: String
-  },
-  ref3: {
-    type: String
-  },
-  ref4: {
-    type: String
-  },
-  ref5: {
-    type: String
-  },
-  refnum1: {
-    type: Number
-  },
-  refnum2: {
-    type: Number
-  },
-  refnum3: {
-    type: Number
-  },
-  refnum4: {
-    type: Number
-  },
-  refnum5: {
-    type: Number
   },
   salt: {
     type: String
