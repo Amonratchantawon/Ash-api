@@ -1,6 +1,5 @@
 "use strict";
 var controller = require("../controllers/controller"),
-  mq = require('../../core/controllers/rabbitmq'),
   policy = require("../policy/policy");
 
 
